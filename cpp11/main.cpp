@@ -1,5 +1,6 @@
 #include "initializerList.h"
 #include "nonStaticMemberInitialize.h"
+#include "lambdas.h"
 #include <vector>
 #include <iostream>
 /*
@@ -64,6 +65,12 @@ int main(int argc, char **argv)
 	}
 	
 	// Lambdas
+	lambdas l;
+	l.test([] () {return 1;});
+	
+	// uncommenting this result in error, f1 is defined inside "test" method lambdas.h 
+	// auto f1 = [] () {return 1;};
+		
 	
 	
 
