@@ -7,6 +7,7 @@
 /*
     links:
         https://gcc.gnu.org/projects/cxx0x.html
+		 * -g;-O0;-std=c++11;-Wall;-Wno-unused-variable
 */
 
 

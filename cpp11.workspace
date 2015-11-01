@@ -2,11 +2,14 @@
 <CodeLite_Workspace Name="cpp11" Database="">
   <Project Name="cpp11" Path="cpp11/cpp11.project" Active="Yes"/>
   <BuildMatrix>
-    <WorkspaceConfiguration Name="Debug" Selected="yes">
+    <WorkspaceConfiguration Name="Debug" Selected="no">
       <Project Name="cpp11" ConfigName="Debug"/>
     </WorkspaceConfiguration>
-    <WorkspaceConfiguration Name="Release" Selected="yes">
+    <WorkspaceConfiguration Name="Release" Selected="no">
       <Project Name="cpp11" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Debug CLANG" Selected="yes">
+      <Project Name="cpp11" ConfigName="Debug CLANG"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
