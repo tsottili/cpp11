@@ -17,6 +17,9 @@
 
 int main(int argc, char **argv)
 {
+	// __func__ is the function name
+	std::cout << __func__ << std::endl;
+	
 	// type alias, this is not a new type.
 	using myInt = int;
 	using myBool = bool;
