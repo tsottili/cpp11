@@ -37,6 +37,7 @@
     <File Name="lambdas.h"/>
     <File Name="lambdas.cpp"/>
     <File Name="myVariadicTemplate.h"/>
+    <File Name="override.h"/>
   </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>

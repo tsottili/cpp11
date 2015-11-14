@@ -2,18 +2,25 @@
 #include "nonStaticMemberInitialize.h"
 #include "lambdas.h"
 #include "myVariadicTemplate.h"
+#include "override.h"
 #include <vector>
 #include <iostream>
 /*
     links:
         https://gcc.gnu.org/projects/cxx0x.html
-		 * -g;-O0;-std=c++11;-Wall;-Wno-unused-variable
+		 
 */
-
-
 
 int main(int argc, char **argv)
 {
+	// type alias, this is not a new type.
+	using myInt = int;
+	using myBool = bool;
+		
+	// type alias & template
+	// TODO.
+
+	
     // Initializer lists examples
     initializerList il{1,true};
 	// return value can be an initializer list
@@ -28,8 +35,8 @@ int main(int argc, char **argv)
 	// auto make iterator cycles simpler!
 	
 	// legacy
-    ;std::vector<int> v = {0,1,2,3,4,5,6,7,8,9};
-    for (std::vector<int>::iterator it = v.begin(); it != v.end(); it++)
+    ;std::vector<myInt> v = {0,1,2,3,4,5,6,7,8,9};
+    for (std::vector<myInt>::iterator it = v.begin(); it != v.end(); it++)
     {
         std::cout << *it << ",";
     }
@@ -78,23 +85,42 @@ int main(int argc, char **argv)
 	void * p2 = 0;
 	if (p1 == p2)
 	{
-		int a=1;
+		myInt a=1;
 	}
 	
 	
 	// Variadics
-	int total = sum(1,2,3,4,5,6,7,8);
-	int total2 = sum(1,2,3,4,5);
+	myInt total = sum(1,2,3,4,5,6,7,8);
+	myInt total2 = sum(1,2,3,4,5);
 	total=total2;
 	total2=total;
 	
-	myVariadicTemplate<int, bool> m(1, true);
+	myVariadicTemplate<myInt, myBool> m(1, true);
 	
 	m.check();
 	
 	size_t sz = m.getCount();
 	
 
+	// enum class 
+	
+	// the same value can be present in two differents enum class 	
+	enum class Animals {horse, dog, cow, lion};
+	enum class Pets {fish, cat, dog};
+	
+	
+	// these doesn't compile
+	// bool b = (animals::dog == pets::dog)
+	
+	// bool b2 = animals::dog == 1;
+	
+	Animals animal;
+	
+	// this is ok
+	animal = Animals::dog;
+	
+	// this doesn't compile
+	//animal = dog;
 	
     return 0;
 	
