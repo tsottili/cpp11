@@ -3,8 +3,12 @@
 #include "lambdas.h"
 #include "myVariadicTemplate.h"
 #include "override.h"
+#include "constructorDelegates.h"
+#include "testStrings.h"
+
 #include <vector>
 #include <iostream>
+
 /*
     links:
         https://gcc.gnu.org/projects/cxx0x.html
@@ -122,6 +126,8 @@ int main(int argc, char **argv)
 	// this doesn't compile
 	//animal = dog;
 	
-    return 0;
+	testString();
+	
+	return 0;
 	
 }

@@ -38,6 +38,8 @@
     <File Name="lambdas.cpp"/>
     <File Name="myVariadicTemplate.h"/>
     <File Name="override.h"/>
+    <File Name="constructorDelegates.h"/>
+    <File Name="testStrings.h"/>
   </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>
